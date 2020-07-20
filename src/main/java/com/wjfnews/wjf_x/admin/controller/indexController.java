@@ -46,7 +46,7 @@ public class indexController {
         return modelAndView;
     }
 
-    @RequestMapping("loginOn")
+    /*@RequestMapping("loginOn")
     public ModelAndView loginOn(HttpServletRequest request, HttpServletResponse response,String user,String password){
         ModelAndView modelAndView = new ModelAndView();
         System.out.println(user+"   "+password);
@@ -59,7 +59,7 @@ public class indexController {
 
         return modelAndView;
     }
-
+*/
 
     @RequestMapping("index")//主页
     public ModelAndView index(){
