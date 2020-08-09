@@ -62,19 +62,19 @@ public class UserServiceImpl implements UserService {
     @Override
     public User selectUserByName(String s) {
         System.out.println("参数：" + s);
-        //User user = userRepository.findByUser(s); //查询方法一
-        Optional<User> user = userRepository.findOne(new Specification<User>() {
+        User user = userRepository.findByUser(s); //查询方法一
+       /* Optional<User> user = userRepository.findOne(new Specification<User>() {
             @Override
             public Predicate toPredicate(Root<User> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
                 Path<Object> user = root.get("user");
                 Predicate equal = criteriaBuilder.equal(user, s);
                 return equal;
             }
-        }); //查询方法二
-        //System.out.println(user);
-        List<UserRole> roles = user.get().getRoles();
+        }); //查询方法二*/
+        System.out.println(user);
+       /* List<UserRole> roles = user.get().getRoles();
         System.out.println(user.get());
-        System.out.println(roles.get(0));
-        return user.get();
+        System.out.println(roles.get(0));*/
+        return user;
     }
 }

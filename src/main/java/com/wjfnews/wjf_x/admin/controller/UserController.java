@@ -35,7 +35,7 @@ public class UserController {
     }
 
     @GetMapping("/selectUserByUser")
-    public User selectUserByUser(String s) {    //getmapping 不能和@RequestBody同时使用
+    public User selectUserByUser(String s) {    //@GetMapping 不能和@RequestBody同时使用
         System.out.println(s);
         User user1 = userService.selectUserByName(s);
         return user1;
