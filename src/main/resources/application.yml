@@ -1,4 +1,14 @@
 spring:
+  mail:
+    username: 1716416169@qq.com
+    password: ngrwihdkgpgvcafe
+    host: smtp.qq.com #开启加密验证
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+
   thymeleaf:
     cache: false #关闭缓存，修改后立即生效，不需要重启项目
   datasource:
@@ -17,8 +27,9 @@ spring:
     hibernate:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-      ddl-auto: create-drop  #update
-    show-sql: true
+      ddl-auto: update #如果表更改则更新
+    # ddl-auto: create-drop  #启动后删除原表再创建
+    show-sql: true  #开启sql语句展示
 
 mybatis:
   mapper-locations:  classpath:mapper/*.xml
@@ -28,7 +39,6 @@ ftp:
   user: ftpuser
   password: weijianfeng666
   upLoadPath: /home/ftpuser/ftpfile
-
 server:
   port: 8080
 
