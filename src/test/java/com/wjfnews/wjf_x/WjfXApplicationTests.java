@@ -36,7 +36,6 @@ class WjfXApplicationTests {
 
     @Test
     void mailTest2() throws MessagingException {
-
         MimeMessage mimeMessage = javaMailSender.createMimeMessage();
         MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, true, "utf-8");
         mimeMessageHelper.setSubject("这是一封复杂的邮件");
